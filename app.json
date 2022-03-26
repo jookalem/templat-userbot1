@@ -1,0 +1,74 @@
+{
+  "name": "Joo-Userbot",
+  "description": "USERBOT YANG DIGUNAKAN UNTUK BERSENANG SENANG!",
+  "logo": "https://telegra.ph/file/276d22aac9f400898cd27.jpg",
+  "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "modular",
+    "productivity"
+  ],
+  "repository": "https://github.com/jookalem/Joo-Userbot/Joo-Userbot",
+  "telegram": "https://t.me/ikhsanntarjo",
+  "success_url": "https://t.me/ProjectJoni",
+  "stack": "container",
+  "env": {
+    "API_KEY": {
+      "description": "Dapatkan Api Key Di @JoniSupport, Dengan Mengetik /get api atau #api",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Dapatkan Api Hash Di @JoniSupport, Dengan Mengetik /get hash atau #hash",
+      "required": true
+    },
+     "STRING_SESSION": {
+      "description": "Dapatkan String Session Di @JoniSupport, Dengan Mengetik /get string atau #string",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Nama App Heroku, Nama App Yang Paling Pertama Di Isi (Liat Paling Atas)",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API KEY Mu, Dapatkan Dari Web 'https://dashboard.heroku.com/account'",
+      "value": "Check Di Heroku Dashboard Mu",
+      "required": true
+    },
+    "PM_AUTO_BAN": {
+      "description": "Pengalihan Fitur Larangan Otomatis PM. atau /skip",
+      "value": "False",
+      "required": true
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],"buildpacks": [{
+    "url": "https://github.com/heroku/heroku-buildpack-python.git"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-redis"
+  }, {
+    "url": "https://github.com/heroku/heroku-buildpack-google-chrome"
+  }, {
+    "url": "https://github.com/HasibulKabir/heroku-buildpack-rarlab"
+  },{
+    "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+  }, {
+    "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
+  }, {
+    "url": "https://github.com/amivin/aria2-heroku"
+  }, {
+    "url": "https://github.com/stevo550/buildpack-slug-cleaner"
+  }],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}
